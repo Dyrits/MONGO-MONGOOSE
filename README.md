@@ -11,3 +11,4 @@ In the MongoDB and Mongoose courses, you'll learn the fundamentals of working wi
 This is the boilerplate for the MongoDB and Mongoose lessons. Instructions for completing these lessons start at https://www.freecodecamp.org/learn/apis-and-microservices/mongodb-and-mongoose/
 
 1. [Install and Set Up Mongoose](https://github.com/Dyrits/MONGO-MONGOOSE/blob/gomix/01%20-%20Install%20and%20Set%20Up%20Mongoose.md)
+2. [Create a Model](https://github.com/Dyrits/MONGO-MONGOOSE/blob/gomix/02%20-%20Create%20a%20Model.md)
