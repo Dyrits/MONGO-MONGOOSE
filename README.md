@@ -12,3 +12,4 @@ This is the boilerplate for the MongoDB and Mongoose lessons. Instructions for c
 
 1. [Install and Set Up Mongoose](https://github.com/Dyrits/MONGO-MONGOOSE/blob/main/01%20-%20Install%20and%20Set%20Up%20Mongoose.md)
 2. [Create a Model](https://github.com/Dyrits/MONGO-MONGOOSE/blob/main/02%20-%20Create%20a%20Model.md)
+3. [Create and Save a Record of a Model]()
