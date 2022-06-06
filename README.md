@@ -14,4 +14,5 @@ This is the boilerplate for the MongoDB and Mongoose lessons. Instructions for c
 2. [Create a Model](https://github.com/Dyrits/MONGO-MONGOOSE/blob/main/02%20-%20Create%20a%20Model.md)
 3. [Create and Save a Record of a Model](https://github.com/Dyrits/MONGO-MONGOOSE/blob/main/03%20-%20Create%20and%20Save%20a%20Record%20of%20a%20Model.md)
 4. [Create Many Records with model.create()](https://github.com/Dyrits/MONGO-MONGOOSE/blob/main/04%20-%20Create%20Many%20Records%20with%20model.create().md)
-4. [Use model.find() to Search Your Database](https://github.com/Dyrits/MONGO-MONGOOSE/blob/main/05%20-%20Use%20model.find()%20to%20Search%20Your%20Database.md)
+5. [Use model.find() to Search Your Database](https://github.com/Dyrits/MONGO-MONGOOSE/blob/main/05%20-%20Use%20model.find()%20to%20Search%20Your%20Database.md)
+6. [Use model.findOne() to Return a Single Matching Document from Your Database]()
