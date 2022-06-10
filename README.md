@@ -17,3 +17,4 @@ This is the boilerplate for the MongoDB and Mongoose lessons. Instructions for c
 5. [Use model.find() to Search Your Database](https://github.com/Dyrits/MONGO-MONGOOSE/blob/main/05%20-%20Use%20model.find()%20to%20Search%20Your%20Database.md)
 6. [Use model.findOne() to Return a Single Matching Document from Your Database](https://github.com/Dyrits/MONGO-MONGOOSE/blob/main/06%20-%20Use%20model.findOne()%20to%20Return%20a%20Single%20Matching%20Document%20from%20Your%20Database.md)
 7. [Use model.findById() to Search Your Database By _id](https://github.com/Dyrits/MONGO-MONGOOSE/blob/main/07%20-%20Use%20model.findById()%20to%20Search%20Your%20Database%20By%20_id.md)
+8. [Perform Classic Updates by Running Find, Edit, then Save]()
