@@ -1,42 +1,42 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
 
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true});
 
-const { personSchema, Person } = require("./Person");
+const {personSchema, Person} = require("./Person");
 
 const createAndSavePerson = (done) => {
-  const person = new Person({
-    name: "Dylan J. Gerrits",
-    age: 33,
-    favoriteFoods: ["Dakgalbi with cheese", "Hamburger"],
-  });
-  person.save((error, data) => {
-    if (error) { return console.error(error); }
-    done(null, data);
-  });
+    const person = new Person({
+        name: "Dylan J. Gerrits",
+        age: 33,
+        favoriteFoods: ["Dakgalbi with cheese", "Hamburger"],
+    });
+    person.save((error, data) => {
+        if (error) { return console.error(error); }
+        done(null, data);
+    });
 
 };
 
 const createManyPeople = (arrayOfPeople, done) => {
-  Person.create(arrayOfPeople, (error, data) => {
-    if (error) { return console.error(error); }
-    done(null, data);
-  });
+    Person.create(arrayOfPeople, (error, data) => {
+        if (error) { return console.error(error); }
+        done(null, data);
+    });
 };
 
 const findPeopleByName = (personName, done) => {
-    Person.find({ name: personName }, (error, data) => {
+    Person.find({name: personName}, (error, data) => {
         if (error) { return console.error(error); }
         done(null, data);
     });
 };
 
 const findOneByFood = (food, done) => {
-  Person.findOne({ favoriteFoods: food }, (error, data) => {
-    if (error) { return console.error(error); }
-    done(null, data);
-  });
+    Person.findOne({favoriteFoods: food}, (error, data) => {
+        if (error) { return console.error(error); }
+        done(null, data);
+    });
 };
 
 const findPersonById = (personId, done) => {
@@ -47,7 +47,7 @@ const findPersonById = (personId, done) => {
 };
 
 const findEditThenSave = (personId, done) => {
-  const foodToAdd = "hamburger";
+    const foodToAdd = "hamburger";
     /*
     Person.updateOne({ _id: personId }, { $push: { favoriteFoods: foodToAdd } }, (error, data) => {
         if (error) { return console.error(error); }
@@ -55,42 +55,48 @@ const findEditThenSave = (personId, done) => {
     });
     */
     Person.findById(personId, (error, person) => {
-        if(error) { return console.log(error); }
+        if (error) { return console.log(error); }
         person.favoriteFoods.push(foodToAdd);
         person.save((error, data) => {
-            if(error) { return console.log(error); }
+            if (error) { return console.log(error); }
             done(null, data)
         })
     })
 };
 
 const findAndUpdate = (personName, done) => {
-  const ageToSet = 20;
-  Person.findOneAndUpdate({ name: personName }, { age: ageToSet }, { new: true }, (error, data) => {
-    if (error) { return console.error(error); }
-    done(null, data);
-  });
+    const ageToSet = 20;
+    Person.findOneAndUpdate({name: personName}, {age: ageToSet}, {new: true}, (error, data) => {
+        if (error) { return console.error(error); }
+        done(null, data);
+    });
 };
 
 const removeById = (personId, done) => {
-  Person.findByIdAndRemove(personId, (error, data) => {
-    if (error) { return console.error(error); }
-    done(null, data);
-  });
+    Person.findByIdAndRemove(personId, (error, data) => {
+        if (error) { return console.error(error); }
+        done(null, data);
+    });
 };
 
 const removeManyPeople = (done) => {
-  const nameToRemove = "Mary";
-    Person.deleteMany({ name: nameToRemove }, (error, data) => {
+    const nameToRemove = "Mary";
+    Person.deleteMany({name: nameToRemove}, (error, data) => {
         if (error) { return console.error(error); }
         done(null, data);
     });
 };
 
 const queryChain = (done) => {
-  const foodToSearch = "burrito";
-
-  done(null /*, data*/);
+    const foodToSearch = "burrito";
+    Person.find({favoriteFoods: foodToSearch})
+        .sort({ name: "asc" })
+        .limit(2)
+        .select({ age: 0 })
+        .exec((error, data) => {
+            if (error) { return console.error(error); }
+            done(null, data);
+        });
 };
 
 
