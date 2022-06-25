@@ -21,4 +21,4 @@ This is the boilerplate for the MongoDB and Mongoose lessons. Instructions for c
 9. [Perform New Updates on a Document Using model.findOneAndUpdate()](https://github.com/Dyrits/MONGO-MONGOOSE/blob/main/09%20-%20Perform%20New%20Updates%20on%20a%20Document%20Using%20model.findOneAndUpdate().md)
 10. [Delete One Document Using model.findByIdAndRemove](https://github.com/Dyrits/MONGO-MONGOOSE/blob/main/10%20-%20Delete%20One%20Document%20Using%20model.findByIdAndRemove.md)
 11. [Delete Many Documents with model.remove()](https://github.com/Dyrits/MONGO-MONGOOSE/blob/main/11%20-%20Delete%20Many%20Documents%20with%20model.remove().md)
-12. [Chain Search Query Helpers to Narrow Search Results]()
+12. [Chain Search Query Helpers to Narrow Search Results](https://github.com/Dyrits/MONGO-MONGOOSE/blob/main/12%20-%20Chain%20Search%20Query%20Helpers%20to%20Narrow%20Search%20Results.md)
